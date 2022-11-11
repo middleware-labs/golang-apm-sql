@@ -14,7 +14,7 @@ func main() {
 		track.WithConfigTag("service", "your service name"),
 		track.WithConfigTag("projectName", "your project name"),
 	)
-	db, err := mw_sql.Open("mysql", "username:password@tcp(127.0.0.1:3306)/todo")
+	db, err := mw_sql.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname")
 	if err != nil {
 		panic(err.Error())
 	}
