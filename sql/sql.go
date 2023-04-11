@@ -21,3 +21,7 @@ func WithDBSystem(system string) otelsql.Option {
 func WithAttributes(attrs ...attribute.KeyValue) otelsql.Option {
 	return otelsql.WithAttributes(attrs...)
 }
+
+func WithDBName(name string) otelsql.Option {
+	return otelsql.WithDBName(name)
+}
