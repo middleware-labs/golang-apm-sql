@@ -13,8 +13,8 @@ import (
 func main() {
 	r := gin.Default()
 	config, _ := tracker.Track(
-		track.WithConfigTag("service", "Your service name"),
-		track.WithConfigTag("projectName", "Your project name"),
+		tracker.WithConfigTag("service", "Your service name"),
+		tracker.WithConfigTag("projectName", "Your project name"),
 	)
 	r.Use(g.Middleware(config))
 	db, err := mw_sql.Open("mysql", "username:password@tcp(127.0.0.1:3306)/dbname")
